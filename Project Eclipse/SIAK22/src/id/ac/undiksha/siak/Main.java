@@ -39,7 +39,8 @@ public class Main {
 	        dewi.setAlamat("Denpasar");
 	        dewi.setBidang_keahlian("Matematika");
 	        dewi.setJenisKelamin(false);
-
+	        
+	        System.out.println("---------");
 	        
 	        System.out.println(dewi.getNip());
 	        System.out.println(dewi.getNama_dosen());
@@ -47,7 +48,20 @@ public class Main {
 	        System.out.println(dewi.getJenisKelamin());
 	        System.out.println(dewi.getBidang_keahlian());
 		
-		
+	     
+	      	 System.out.println("-----------");
+	      	 
+	      	 Mahasiswa cici = new Mahasiswa(
+	      			 "2215101046",
+	      			 "Ici",
+	      			 "Buton",
+	      			 "Ilmu komputer",
+	      			 "7 Juli 2004",
+	      			 true
+	      		);
+	      	 
+	    	    cici.printAll();
+	    	    
 	}
 
 }
