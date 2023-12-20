@@ -1,67 +1,105 @@
 package id.ac.undiksha.siak;
 
-
 import id.ac.undiksha.siak.people.Mahasiswa;
+import id.ac.undiksha.siak.people.Manusia;
 import id.ac.undiksha.siak.people.Dosen;
+
+
 public class Main {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		Mahasiswa ici =  new Mahasiswa();
+	
+	public static void main(String[] args) { //TODO
 		
-		ici.setNim("2215101046");
-		ici.setNama("Ici");
-		ici.setTanggalLahir("7 Juli 2004");
-		ici.setJeniskelamin(true);
-		ici.setProdi("Ilmu Komputer");
-		ici.setAlamat("Singaraja");
+		/*Mahasiswa ani = new Mahasiswa();
 		
-		/*ani.nim = "2215092";
-		ani.nama = "ani";
-		ani.tanggalLahir = "1 Januari 2000";
-		ani.jeniskelamin = true;
-		ani.prodi = "Ilmu Komputer";
-		ani.alamat = "Singaraja";
-		*/
+		ani.setNim("12345");
+		ani.setNama("Ani");
+		ani.setAlamat("Singaraja");
+		ani.setTanggalLahir("1 Januari 2000");
+		ani.setJenisKelamin(true);
+		ani.setProdi("Ilmu Komputer");*/
 		
-		System.out.println(ici.getNim());
-		System.out.println(ici.getNama());
-		System.out.println(ici.getTanggalLahir());
-		System.out.println(ici.isJeniskelamin());
-		System.out.println(ici.getProdi());
-		System.out.println(ici.getAlamat());
+		Dosen agus = new Dosen();
+		
+		agus.setNip("199745");
+		agus.setNama("AGUS");
+		agus.setAlamat("Buton");
+		agus.setTanggalLahir("08 Juli 1983");
+		agus.setJenisKelamin(true);
+		agus.setMatakuliah("Mata Kuliah: Pemrograman Berorientasi Objek");
 		
 		
-		 Dosen dewi = new Dosen();
-	        dewi.setNip("12345");
-	        dewi.setNama_dosen("Dewi");
-	        dewi.setAlamat("Denpasar");
-	        dewi.setBidang_keahlian("Matematika");
-	        dewi.setJenisKelamin(false);
-	        
-	        System.out.println("---------");
-	        
-	        System.out.println(dewi.getNip());
-	        System.out.println(dewi.getNama_dosen());
-	        System.out.println(dewi.getAlamat());
-	        System.out.println(dewi.getJenisKelamin());
-	        System.out.println(dewi.getBidang_keahlian());
+		/*System.out.println (ani.getNim());
+		System.out.println (ani.getNama());
+		System.out.println (ani.getAlamat());
+		System.out.println (ani.getTanggalLahir());
+		System.out.println (ani.getJenisKelamin());
+		System.out.println (ani.getProdi());*/
 		
-	     
-	      	 System.out.println("-----------");
-	      	 
-	      	 Mahasiswa cici = new Mahasiswa(
-	      			 "2215101046",
-	      			 "Ici",
-	      			 "Buton",
-	      			 "Ilmu komputer",
-	      			 "7 Juli 2004",
-	      			 true
-	      		);
-	      	 
-	    	    cici.printAll();
-	    	    
+		System.out.println ("------------");
+		
+		System.out.println (agus.getNip());
+		System.out.println (agus.getNama());
+		System.out.println (agus.getAlamat());
+		System.out.println (agus.getTanggalLahir());
+		System.out.println (agus.getJenisKelamin());
+		System.out.println (agus.getMatakuliah());
+		
+		System.out.println ("------------");
+		
+		Mahasiswa mhs1 = new Mahasiswa();
+		mhs1.printAll();
+		mhs1.getProdi().setKodeProdi("07");
+		mhs1.getProdi().setNamaProdi("ILKOM");
+		
+		/*ani.nim 			="12345";
+		ani.nama			= "Ani";
+		ani.alamat			="Singaraja";
+		ani.tanggalLahir	="1 januari 2000";
+		ani.jenisKelamin	= true;
+		ani.prodi			="Ilmu Komputer";
+		
+		System.out.println(ani.nim);
+		System.out.println(ani.nama);
+		System.out.println(ani.alamat);
+		System.out.println(ani.tanggalLahir);
+		System.out.println(ani.jenisKelamin);
+		System.out.println(ani.prodi);*/
+		System.out.println ("------------");
+		
+		Mahasiswa ici = new Mahasiswa(
+				"Ici",
+				"Pasarwajo",
+				"07 Juli 2004",
+				true,
+				
+				"2215101046",
+				"ILMU KOMPUTER"
+				);
+		ici.printAll();
+		
+		
+		System.out.println ("------------");
+		
+		Dosen fauzan = new Dosen(
+				"199745",
+				"Fauzan",
+				"Buton",
+				"Mata Kuliah: Pemrograman Berorientasi Objek",
+				"08 Juli 1983",
+				true
+				
+				);
+		fauzan.printAll();
+		
+		System.out.println ("------------");
+		
+		Manusia mn1 = new Mahasiswa();
+		mn1.printAll();
+		
+		System.out.println ("------------");
+		
+		/*Mahasiswa mhs1 = new Manusia();*/
+		
+				
 	}
-
 }

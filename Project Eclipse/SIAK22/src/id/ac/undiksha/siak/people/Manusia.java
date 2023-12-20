@@ -1,30 +1,28 @@
 package id.ac.undiksha.siak.people;
 
-public class Manusia {
-	
+public abstract class Manusia {
 	private String nama;
 	private String alamat;
 	private String tanggalLahir;
-	private boolean jeniskelamin;
-	
+	private boolean jenisKelamin;
+ 
 	public Manusia() {
-		
-		this.nama 			= "<masukan nama>";
-		this.alamat 		= "<masukan alamat>";
-		this.tanggalLahir 	= "<masukan tanggal lahir>";
+		this.nama			="<masukkan nama>";
+		this.alamat			="<masukkan alamat>";
+		this.tanggalLahir	="<masukkan tanggal lahir>";
 	}
 
 	public Manusia(
-			String nama,
-			String alamat,
-			String tanggalLahir,
-			boolean jeniskelamin) 
-	{
+			String nama, 
+			String alamat, 
+			String tanggalLahir, 
+			boolean jenisKelamin
+		) {
 		super();
 		this.nama 			= nama;
 		this.alamat 		= alamat;
 		this.tanggalLahir 	= tanggalLahir;
-		this.jeniskelamin 	= jeniskelamin;
+		this.jenisKelamin 	= jenisKelamin;
 	}
 
 	public String getNama() {
@@ -51,25 +49,28 @@ public class Manusia {
 		this.tanggalLahir = tanggalLahir;
 	}
 
-	public boolean isJeniskelamin() {
-		return jeniskelamin;
+	public boolean isJenisKelamin() {
+		return jenisKelamin;
 	}
-
-	public void setJeniskelamin(boolean jeniskelamin) {
-		this.jeniskelamin = jeniskelamin;
-	}
+	
 	public String getJenisKelamin() {
-		if (this.isJeniskelamin()) {
+		if (this.isJenisKelamin()) {
 			return "Perempuan";
-		} else {
-			return "Laki-Laki";
+		}else {
+			return "Laki-laki";
 		}
 	}
-	public void printAll() {
-		System.out.println(this.getNama());
-		System.out.println(this.getAlamat());
-		System.out.println(this.getTanggalLahir());
-		System.out.println(this.getJenisKelamin());
-		
+
+	public void setJenisKelamin(boolean jenisKelamin) {
+		this.jenisKelamin = jenisKelamin;
 	}
+	
+	public void printAll() {
+		System.out.println (this.getNama());
+		System.out.println (this.getAlamat());
+		System.out.println (this.getTanggalLahir());
+		System.out.println (this.getJenisKelamin());
+	}
+	
 }
+
